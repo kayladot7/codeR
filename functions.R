@@ -3,6 +3,21 @@ cal_bmi <- function(weight, height){
   return(bmi)
 }
 
+solve_equation <- function(a, b){
+  a <- as.numeric(readline(prompt = "Input value of a: "))
+  b <- as.numeric(readline(prompt = "Input value of b: "))
+  if(a == 0){
+    if(b != 0){
+      x <- "The equation has no solution."
+    }else{
+      x <- "The equation has countless solutions."
+    }
+  }else{
+  x <- paste("x =", -b/a)
+  print(x)
+  }
+}
+
 sum_even <- function(start, end){
   sum_even <- 0
   for(i in start:end){
