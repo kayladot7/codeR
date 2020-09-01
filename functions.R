@@ -14,8 +14,8 @@ solve_equation <- function(a, b){
     }
   }else{
   x <- paste("x =", -b/a)
-  print(x)
   }
+  print(x)
 }
 
 sum_even <- function(start, end){
