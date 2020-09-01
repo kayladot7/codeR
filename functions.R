@@ -4,8 +4,6 @@ cal_bmi <- function(weight, height){
 }
 
 solve_equation <- function(a, b){
-  a <- as.numeric(readline(prompt = "Input value of a: "))
-  b <- as.numeric(readline(prompt = "Input value of b: "))
   if(a == 0){
     if(b != 0){
       x <- "The equation has no solution."
@@ -15,7 +13,27 @@ solve_equation <- function(a, b){
   }else{
   x <- paste("x =", -b/a)
   }
-  print(x)
+  return(x)
+}
+
+equation_solver_2 <- function(a,b,c){
+  if(a == 0){
+    message("Back to use the function of equation solver 1:\na <- b\nb <- c")
+    x <- solve_equation(b, c)
+  }else{
+    delta <- b^2 - 4*a*c
+    #print(paste("delta: ", delta))
+    if(delta < 0){
+      x <- "The equation has no solution."
+    }else if(delta == 0){
+      x <- paste("Equations have double solutions:\nx1 = x2 = ", (-b)/(2*a)) 
+    }else{
+      x1 <- (-b + sqrt(delta))/(2*a)
+      x2 <- (-b - sqrt(delta))/(2*a)
+      x <- paste("Equations have two distinct solutions:\n\tx1 = ", x1, "\n\tx2 = ", x2)
+    }
+  }
+  return(x)
 }
 
 sum_even <- function(start, end){
