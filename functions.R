@@ -52,26 +52,39 @@ drink <- function(price, type="Tea"){
 }
 
 electric_cal <- function(n){
-  p1 = 1.678 * n
-  p2 = 1.734 * (n - 50)
-  p3 = 2.014 * (n - 100)
-  p4 = 2.536 * (n - 200)
-  p5 = 2.834 * (n - 300)
-  p6 = 2.927 * (n - 400)
+  r1 <- 1678
+  r2 <- 1734
+  r3 <- 2014
+  r4 <- 2536
+  r5 <- 2834
+  r6 <- 2927
+  
+  p_1 <- r1 * 50
+  p_2 <- r2 * 50
+  p_3 <- r3 * 100
+  p_4 <- r4 * 100
+  p_5 <- r5 * 100
+  
+  p1 = r1 * n
+  p2 = r2 * (n - 50) + p_1
+  p3 = r3 * (n - 100) + p_2 + p_1
+  p4 = r4 * (n - 200) + p_3 + p_2 + p_1
+  p5 = r5 * (n - 300) + p_4 + p_3 + p_2 + p_1
+  p6 = r6 * (n - 400) + p_5 + p_4 + p_3 + p_2 + p_1
 
   if(n <= 50){
-    print(paste("Price: ", p1))
-  } else if(n <= 100){
-    print(paste("Price: ", p1 + p2))
-  } else if(n <= 200){
-    print(paste("Price: ", p1 + p2 + p3))
-  } else if(n <= 300){
-    print(paste("Price: ", p1 + p2 + p3 + p4))
-  } else if(n <= 400){
-    print(paste("Price: ", p1 + p2 + p3 + p4 + p5))
-  } else { 
-    print(paste("Price: ", p1 + p2 + p3 + p4 + p5 + p6))
-  }
+  print(paste("Price: ", p1))
+} else if(n <= 100){
+  print(paste("Price: ", p2))
+} else if(n <= 200){
+  print(paste("Price: ", p3))
+} else if(n <= 300){
+  print(paste("Price: ", p4))
+} else if(n <= 400){
+  print(paste("Price: ", p5))
+} else { 
+  print(paste("Price: ", p6))
+}
   return 
 }
     
