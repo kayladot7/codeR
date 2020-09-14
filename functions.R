@@ -74,17 +74,17 @@ electric_cal <- function(n){
 
   if(n <= 50){
   print(paste("Price: ", p1))
-} else if(n <= 100){
-  print(paste("Price: ", p2))
-} else if(n <= 200){
-  print(paste("Price: ", p3))
-} else if(n <= 300){
-  print(paste("Price: ", p4))
-} else if(n <= 400){
-  print(paste("Price: ", p5))
-} else { 
-  print(paste("Price: ", p6))
-}
+  } else if(n <= 100){
+    print(paste("Price: ", p2))
+  } else if(n <= 200){
+    print(paste("Price: ", p3))
+  } else if(n <= 300){
+    print(paste("Price: ", p4))
+  } else if(n <= 400){
+    print(paste("Price: ", p5))
+  } else { 
+    print(paste("Price: ", p6))
+  }
   return(electrical_cal) 
 }
     
