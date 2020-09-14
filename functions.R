@@ -73,16 +73,16 @@ electric_cal <- function(n){
   p6 = r6 * (n - 400) + p_5 + p_4 + p_3 + p_2 + p_1
 
   if(n <= 50){
-  print(paste("Price: ", p1))
-  } else if(n <= 100){
+    print(paste("Price: ", p1))
+  }else if(n <= 100){
     print(paste("Price: ", p2))
-  } else if(n <= 200){
+  }else if(n <= 200){
     print(paste("Price: ", p3))
-  } else if(n <= 300){
+  }else if(n <= 300){
     print(paste("Price: ", p4))
-  } else if(n <= 400){
+  }else if(n <= 400){
     print(paste("Price: ", p5))
-  } else { 
+  }else{ 
     print(paste("Price: ", p6))
   }
   return(electrical_cal) 
