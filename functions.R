@@ -85,7 +85,7 @@ electric_cal <- function(n){
 } else { 
   print(paste("Price: ", p6))
 }
-  return 
+  return(electrical_cal) 
 }
     
 getmode <- function(v){
