@@ -87,6 +87,21 @@ electric_cal <- function(n){
   }
 }
     
+check_prime <- function(n){
+  if(n == 2){
+    ch <- paste(n, "is a prime.")
+  }else{
+    for(i in n){
+      if(n %% 2 == 0){
+        ch <- paste(n, "is not a prime.")
+      }else{
+        ch <- paste(n, "is a prime.")
+      }
+    }
+  }
+  print(ch)
+}
+    
 getmode <- function(v){
     uniqv <- unique(v)
     uniqv[which.max(tabulate(match(v, uniqv)))]
